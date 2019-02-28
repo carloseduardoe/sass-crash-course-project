@@ -1,3 +1,6 @@
+@import 'mixins';
+@import 'functions';
+
 $colors: (
     primary: #005DFF,
     primary-light: lighten(#005DFF, 40%),
@@ -5,27 +8,21 @@ $colors: (
     accent: #FFF6BB
 );
 
-$padding: 15px; 
+$padding: 15px;
 $borders: 15px;
-
-@function color($color-name) {
-    @return map-get($colors, $color-name)
-}
-
-$desktop: 840px;
-
-@mixin desktop {
-    @media (min-width: #{$desktop}) {
-        @content;
-    }
-}
 
 body, html {
     height: 100%;
 }
 
-body {
+
+h1,h2,h3,h4,h5,h6 {
+    
     font-family: 'Montserrat';
+}
+
+
+body {
     margin: 0;
     
     #bg {
