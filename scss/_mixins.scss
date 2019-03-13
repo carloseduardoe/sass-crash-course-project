@@ -1,7 +1,34 @@
-$desktop: 840px;
+// Variables
+$mobile: 768px;
+$desktop: 1280px;
+
+// Mixins
+@mixin mobile {
+  @media screen and (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin not-mobile {
+  @media screen and (min-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (min-width: #{$mobile}) and (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin not-desktop {
+  @media screen and (max-width: #{$desktop}) {
+    @content;
+  }
+}
 
 @mixin desktop {
-    @media (min-width: #{$desktop}) {
-        @content;
-    }
+  @media screen and (min-width: #{$desktop}) {
+    @content;
+  }
 }
