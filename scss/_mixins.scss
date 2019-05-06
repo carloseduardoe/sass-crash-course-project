@@ -1,34 +1,29 @@
-// Variables
-$mobile: 768px;
-$desktop: 1280px;
-
-// Mixins
 @mixin mobile {
-  @media screen and (max-width: #{$mobile}) {
+  @media screen and (max-width: $mobile) {
     @content;
   }
 }
 
 @mixin not-mobile {
-  @media screen and (min-width: #{$mobile}) {
+  @media screen and (min-width: $mobile) {
     @content;
   }
 }
 
 @mixin tablet {
-  @media screen and (min-width: #{$mobile}) and (max-width: #{$desktop}) {
+  @media screen and (min-width: $mobile) and (max-width: $desktop) {
     @content;
   }
 }
 
 @mixin not-desktop {
-  @media screen and (max-width: #{$desktop}) {
+  @media screen and (max-width: $desktop) {
     @content;
   }
 }
 
 @mixin desktop {
-  @media screen and (min-width: #{$desktop}) {
+  @media screen and (min-width: $desktop) {
     @content;
   }
 }

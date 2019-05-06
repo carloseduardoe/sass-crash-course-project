@@ -1,15 +1,6 @@
+@import 'variables';
 @import 'mixins';
 @import 'functions';
-
-$colors: (
-    primary: #005DFF,
-    primary-light: lighten(#005DFF, 40%),
-    primary-dark: darken(#005DFF, 40%),
-    accent: #FFF6BB
-);
-
-$padding: 15px;
-$borders: 15px;
 
 body, html {
     height: 100%;
